@@ -36,7 +36,7 @@ const LoginPage = () => {
   const [captchaText, setCaptchaText] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
-  // Initialize captcha only on client
+
   if (typeof window !== 'undefined' && !captchaText) {
     setCaptchaText(generateCaptcha());
   }
@@ -87,7 +87,7 @@ const LoginPage = () => {
       return;
     }
 
-    // Set simple mock session
+ 
     localStorage.setItem('isLoggedIn', 'true');
     toast.success('Login Berhasil!', { theme: 'dark', position: 'top-right' });
     router.push('/home');
