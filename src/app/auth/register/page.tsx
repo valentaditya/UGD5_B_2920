@@ -30,7 +30,6 @@ const RegisterPage = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [strength, setStrength] = useState(0);
 
-  // Initialize captcha only on client
   useEffect(() => {
     if (!captchaText) {
       setCaptchaText(generateCaptcha());
